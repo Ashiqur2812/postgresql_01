@@ -80,43 +80,59 @@ SELECT MAX(score) FROM students_data;
 
 SELECT MIN(score) FROM students_data;
 
-SELECT * FROM students_data 
-LIMIT 5 OFFSET 2;
+SELECT * FROM students_data LIMIT 5 OFFSET 2;
 
-SELECT * FROM students_data 
-LIMIT 5 OFFSET 5 * 0;
+SELECT * FROM students_data LIMIT 5 OFFSET 5 * 0;
 
-SELECT * FROM students_data 
-LIMIT 5 OFFSET 5 * 1;
+SELECT * FROM students_data LIMIT 5 OFFSET 5 * 1;
 
-SELECT * FROM students_data 
-LIMIT 5 OFFSET 5 * 2;
+SELECT * FROM students_data LIMIT 5 OFFSET 5 * 2;
 
-SELECT * FROM students_data 
-LIMIT 5 OFFSET 5 * 3;
+SELECT * FROM students_data LIMIT 5 OFFSET 5 * 3;
 
-SELECT AVG(score) FROM students_data
-WHERE department = 'EEE';
+SELECT AVG(score) FROM students_data WHERE department = 'EEE';
 
 SELECT AVG(score) FROM students_data;
 
-SELECT AVG(score) FROM students_data
-WHERE department = 'Sociology';
+SELECT AVG(score) FROM students_data WHERE department = 'Sociology';
 
-SELECT SUM(score) FROM students_data
-WHERE department = 'Sociology';
+SELECT SUM(score) FROM students_data WHERE department = 'Sociology';
 
 SELECT MAX(age) from students_data;
 
 SELECT MIN(age) from students_data;
 
-UPDATE students_data
-SET status = 'A'
-WHERE score < 80;
+UPDATE students_data SET status = 'A' WHERE score < 80;
 
-UPDATE students_data
-SET status = 'A+'
-WHERE score >= 80;
+UPDATE students_data SET status = 'A+' WHERE score >= 80;
 
-DELETE FROM students_data
-WHERE last_login < '2024-01-01';
+DELETE FROM
+students_data WHERE last_login < '2024-01-01';
+
+DELETE FROM
+students_data WHERE id IS NULL;
+
+DELETE FROM
+students_data WHERE roll IS NULL;
+
+DELETE FROM
+students_data WHERE name IS NULL;
+
+DELETE FROM
+students_data WHERE age IS NULL;
+
+DELETE FROM students_data 
+WHERE department IS NULL;
+
+DELETE FROM students_data 
+WHERE score IS NULL;
+
+DELETE FROM students_data 
+WHERE status IS NULL;
+
+DELETE FROM
+students_data WHERE last_login IS NULL;
+
+SELECT * FROM students_data
+GROUP BY id 
+ORDER BY id ASC;
