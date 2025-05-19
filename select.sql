@@ -201,7 +201,7 @@ SELECT * FROM students
 WHERE lName LIKE '___i_'; -- like is case sensitive
 
 SELECT * FROM students
-WHERE lName ILIKE '%a';
+WHERE lName ILIKE '%a'; -- case insensitive
 
 SELECT * FROM students
 ORDER BY id DESC
@@ -215,8 +215,6 @@ LIMIT 10;
 SELECT * FROM students
 WHERE country = 'Bangladesh'
 LIMIT 5 OFFSET 2;
-
-
 
 
 SELECT * FROM students;
