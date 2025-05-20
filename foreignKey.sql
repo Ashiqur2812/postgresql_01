@@ -66,3 +66,12 @@ SELECT * FROM post AS p JOIN "User" AS u ON p.id = u.id;
 INSERT INTO
     post (id, title, user_id)
 VALUES (5, 'This is the test post', NULL);
+
+SELECT *  FROM Post AS p
+LEFT JOIN "User" AS u ON p.user_id = u.id;
+
+SELECT * FROM Post AS p
+RIGHT JOIN "User" AS u ON p.user_id = u.id;
+
+SELECT * FROM post AS p
+FULL JOIN "User" AS u ON p.user_id = u.id;
