@@ -50,3 +50,24 @@ SELECT * FROM Learner;
 
 SELECT first_name, last_name, grade, age, blood_group, country FROM Learner
 ORDER BY first_name DESC;
+
+SELECT DISTINCT course from Learner;
+
+SELECT * FROM learner
+WHERE course = 'Sociology';
+
+SELECT age, blood_group, course from Learner
+WHERE country = 'USA';
+
+SELECT DISTINCT grade from Learner
+WHERE course = 'Sociology';
+
+SELECT * FROM Learner
+WHERE blood_group = 'B-';
+
+SELECT first_name, last_name, age, blood_group, country FROM Learner
+WHERE (grade = 'A' or grade = 'B') AND (course = 'Economics' or course = 'Psychology')
+
+SELECT first_name, last_name, age, country, blood_group, course FROM Learner
+WHERE (course = 'Sociology' or course = 'Anthropology') AND age >= 20
+
