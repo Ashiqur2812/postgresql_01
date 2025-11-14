@@ -71,3 +71,13 @@ WHERE (grade = 'A' or grade = 'B') AND (course = 'Economics' or course = 'Psycho
 SELECT first_name, last_name, age, country, blood_group, course FROM Learner
 WHERE (course = 'Sociology' or course = 'Anthropology') AND age >= 20
 
+SELECT first_name, last_name, age, course, blood_group, country FROM Learner
+WHERE country <> 'England';
+
+SELECT DISTINCT age FROM Learner;
+
+SELECT first_name, last_name, age, course, blood_group, grade FROM Learner
+WHERE age BETWEEN 20 AND 25;
+
+SELECT * FROM Learner
+WHERE country IN ('Australia', 'USA');
