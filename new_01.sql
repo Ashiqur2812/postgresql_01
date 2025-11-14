@@ -92,4 +92,20 @@ SELECT * FROM Learner
 WHERE email ILIKE 'a%';
 
 SELECT * FROM Learner
-WHERE first_name LIKE '%n'
+WHERE first_name LIKE '%n';
+
+SELECT * FROM Learner
+WHERE NOT country = 'USA';
+
+SELECT student_id, first_name, last_name, grade, course, country FROM Learner
+WHERE NOT grade = 'A';
+
+SELECT UPPER(first_name), first_name, age, course, blood_group, country FROM Learner;
+
+SELECT LOWER (last_name) FROM Learner;
+
+SELECT concat(first_name, ' ', last_name) as "Full_Name", age, course, blood_group, country FROM Learner;
+
+SELECT LENGTH(first_name) FROM Learner;
+
+SELECT LENGTH(first_name) as first_name_length, first_name, age, course, grade, country FROM Learner ORDER BY first_name_length DESC;
