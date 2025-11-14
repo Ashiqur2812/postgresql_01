@@ -144,3 +144,13 @@ SELECT COUNT(grade) FROM Learner;
 SELECT first_name, grade, age, country FROM Learner;
 DELETE FROM Learner
 WHERE grade = 'C';
+
+SELECT country, AVG(age) as avg_age FROM Learner
+GROUP BY country;
+
+SELECT country, MAX(age) as max_age FROM Learner
+GROUP BY country;
+
+SELECT grade, count(*) FROM Learner
+GROUP BY grade;
+
