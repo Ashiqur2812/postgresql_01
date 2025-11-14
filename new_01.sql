@@ -124,6 +124,19 @@ SELECT * FROM Learner;
 
 SELECT first_name, last_name, age, course, grade, country, COALESCE(email, 'Not Provided') as email FROM Learner;
 
+SELECT * FROM Learner LIMIT 5 OFFSET 5 * 0;
+SELECT * FROM Learner LIMIT 5 OFFSET 5 * 1;
+SELECT * FROM Learner LIMIT 5 OFFSET 5 * 2;
 
+SELECT * FROM Learner;
+SELECT * FROM Learner;
+UPDATE Learner SET email = 'default@gmail.com'
+WHERE email IS NULL;
+
+UPDATE Learner SET grade = 'A+'
+WHERE student_id IN(1, 2);
+
+UPDATE Learner SET course = 'Chemistry'
+WHERE student_id = 3;
 
 
