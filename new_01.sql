@@ -81,3 +81,15 @@ WHERE age BETWEEN 20 AND 25;
 
 SELECT * FROM Learner
 WHERE country IN ('Australia', 'USA');
+
+SELECT * FROM Learner
+WHERE first_name LIKE 'B%';
+
+SELECT * FROM Learner
+WHERE first_name LIKE '%a_';
+
+SELECT * FROM Learner
+WHERE email ILIKE 'a%';
+
+SELECT * FROM Learner
+WHERE first_name LIKE '%n'
