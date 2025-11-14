@@ -109,3 +109,21 @@ SELECT concat(first_name, ' ', last_name) as "Full_Name", age, course, blood_gro
 SELECT LENGTH(first_name) FROM Learner;
 
 SELECT LENGTH(first_name) as first_name_length, first_name, age, course, grade, country FROM Learner ORDER BY first_name_length DESC;
+
+SELECT sum(age) as sum_age FROM Learner;
+
+SELECT COUNT(*) FROM Learner;
+
+SELECT * FROM Learner
+WHERE email IS NULL;
+
+INSERT INTO Learner (first_name, last_name, age, grade, course, dob, blood_group, country) VALUES
+('Rickey', 'Pont', 30, 'A', 'Sociology', '2003-07-20', 'A+', 'England');
+
+SELECT * FROM Learner;
+
+SELECT first_name, last_name, age, course, grade, country, COALESCE(email, 'Not Provided') as email FROM Learner;
+
+
+
+
