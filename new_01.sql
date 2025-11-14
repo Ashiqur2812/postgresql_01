@@ -154,3 +154,11 @@ GROUP BY country;
 SELECT grade, count(*) FROM Learner
 GROUP BY grade;
 
+SELECT course, COUNT(*) FROM Learner
+GROUP BY course
+HAVING COUNT(*) >= 4;
+
+SELECT country, AVG(age) as avg_age FROM Learner
+GROUP BY country
+HAVING AVG(age) > 21;
+
