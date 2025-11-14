@@ -139,4 +139,8 @@ WHERE student_id IN(1, 2);
 UPDATE Learner SET course = 'Chemistry'
 WHERE student_id = 3;
 
+SELECT COUNT(grade) FROM Learner;
 
+SELECT first_name, grade, age, country FROM Learner;
+DELETE FROM Learner
+WHERE grade = 'C';
