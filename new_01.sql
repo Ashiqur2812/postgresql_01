@@ -162,3 +162,28 @@ SELECT country, AVG(age) as avg_age FROM Learner
 GROUP BY country
 HAVING AVG(age) > 21;
 
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(30) NOT NULL
+);
+
+INSERT INTO users (username) VALUES 
+('Root'),
+('Butler'),
+('Cook'),
+('Jason');
+
+SELECT * FROM users;
+SELECT * FROM posts;
+
+CREATE TABLE posts (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    user_id INT REFERENCES users(id)
+);
+
+INSERT INTO posts (title, user_id) VALUES 
+('Exploring a sunny day with Jason! ☀️',2),
+('Butler just shared an amazing recipe 🍎',1),
+('Exploring adventures with Root 🎉',2),
+('Cook''s wisdom always leaves me inspired 🎆', 3);
