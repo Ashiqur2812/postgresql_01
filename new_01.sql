@@ -194,10 +194,13 @@ JOIN users ON posts.user_id = users.id;
 SELECT p.id, title, username FROM posts as p
 INNER JOIN users as u ON p.user_id = u.id;
 
-INSERT INTO posts (id,title) VALUES
+INSERT INTO posts (id, title) VALUES
 (5, 'Enjoying a sunny day with Hafsa!');
 
 SELECT * FROM posts;
 
 SELECT * FROM users as u
 INNER JOIN posts as p on p.user_id = u.id;
+
+SELECT * FROM users as u
+LEFT JOIN posts as p ON p.user_id = u.id;
