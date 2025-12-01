@@ -204,3 +204,6 @@ INNER JOIN posts as p on p.user_id = u.id;
 
 SELECT * FROM users as u
 LEFT JOIN posts as p ON p.user_id = u.id;
+
+SELECT * FROM posts as p
+RIGHT JOIN users as u ON p.user_id = u.id;
