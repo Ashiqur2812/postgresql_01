@@ -207,3 +207,6 @@ LEFT JOIN posts as p ON p.user_id = u.id;
 
 SELECT * FROM posts as p
 RIGHT JOIN users as u ON p.user_id = u.id;
+
+SELECT * FROM posts as p
+FULL OUTER JOIN users as u ON p.user_id = u.id;
