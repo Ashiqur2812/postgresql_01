@@ -210,3 +210,16 @@ RIGHT JOIN users as u ON p.user_id = u.id;
 
 SELECT * FROM posts as p
 FULL OUTER JOIN users as u ON p.user_id = u.id;
+
+CREATE TABLE laborers (
+    emp_id INT,
+    emp_name VARCHAR(30),
+    dept_id INT
+);
+
+DROP TABLE laborers;
+
+CREATE TABLE faculties (
+    dept_id INT,
+    dept_name VARCHAR(30)
+);
