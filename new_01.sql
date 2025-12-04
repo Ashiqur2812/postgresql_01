@@ -212,14 +212,16 @@ SELECT * FROM posts as p
 FULL OUTER JOIN users as u ON p.user_id = u.id;
 
 CREATE TABLE laborers (
-    emp_id INT,
-    emp_name VARCHAR(30),
-    dept_id INT
+    labor_id INT,
+    labor_name VARCHAR(50),
+    faculty_id INT
 );
 
 DROP TABLE laborers;
 
+DROP TABLE faculties;
+
 CREATE TABLE faculties (
-    dept_id INT,
-    dept_name VARCHAR(30)
+    faculty_id INT,
+    faculty_name VARCHAR(50)
 );
