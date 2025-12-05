@@ -225,3 +225,14 @@ CREATE TABLE faculties (
     faculty_id INT,
     faculty_name VARCHAR(50)
 );
+
+INSERT INTO laborers VALUES 
+(1, 'Russel', 101),
+(2, 'Clarke', 102);
+
+INSERT INTO faculties (faculty_id, faculty_name) VALUES
+(101, 'Sociology'),
+(102, 'Psychology');
+
+SELECT * FROM laborers;
+SELECT * FROM faculties;
