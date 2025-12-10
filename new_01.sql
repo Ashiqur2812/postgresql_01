@@ -236,3 +236,8 @@ INSERT INTO faculties (faculty_id, faculty_name) VALUES
 
 SELECT * FROM laborers;
 SELECT * FROM faculties;
+
+-- cross join
+
+SELECT * FROM laborers
+CROSS JOIN faculties;
