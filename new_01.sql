@@ -241,3 +241,6 @@ SELECT * FROM faculties;
 
 SELECT * FROM laborers
 CROSS JOIN faculties;
+
+SELECT * FROM laborers
+NATURAL JOIN faculties;
