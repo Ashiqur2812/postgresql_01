@@ -211,10 +211,20 @@ RIGHT JOIN users as u ON p.user_id = u.id;
 SELECT * FROM posts as p
 FULL OUTER JOIN users as u ON p.user_id = u.id;
 
+-- cross join
+
+SELECT * FROM laborers 
+CROSS JOIN faculties;
+
+SELECT * FROM laborers 
+NATURAL JOIN faculties;
+
 CREATE TABLE laborers (
-    labor_id INT,
+    labor_id SERIAL PRIMARY KEY,
     labor_name VARCHAR(50),
-    faculty_id INT
+    faculty_id INT REFERENCES faculties (faculty_id),
+    salary DECIMAL(10, 2),
+    hire_date DATE
 );
 
 DROP TABLE laborers;
@@ -222,25 +232,41 @@ DROP TABLE laborers;
 DROP TABLE faculties;
 
 CREATE TABLE faculties (
-    faculty_id INT,
+    faculty_id SERIAL PRIMARY KEY,
     faculty_name VARCHAR(50)
 );
 
-INSERT INTO laborers VALUES 
-(1, 'Russel', 101),
-(2, 'Clarke', 102);
+INSERT INTO laborers (labor_name, faculty_id, salary, hire_date) VALUES 
+('Russel', 1, 60000.00, '2022-01-10'),
+('Clarke', 2, 50000.00, '2024-05-23'),
+('Holder', 3, 55000.00, '2022-02-03'),
+('Mitchell', 4, 52000.00, '2023-02-05'),
+('Johnson', 5, 56000.00, '2014-07-26'),
+('Jason', 6, 30000.00, '2024-02-13'),
+('Shane', 7, 51000.00, '2021-09-11'),
+('Roy', 8, 57000.00, '2020-05-23'),
+('Gilchrist', 9, 45000.00, '2023-01-18'),
+('Hodge', 10, 57000.00, '2018-11-19'),
+('Hogg', 11, 59000.00, '2020-09-09'),
+('Watson', 12, 76000.00, '2009-12-31'),
+('Pollard', 13, 64000.00, '2007-11-20'),
+('Bravo', 14, 90000.00, '2005-05-02'),
+('Gayle', 15, 95000.00, '2003-02-12');
 
-INSERT INTO faculties (faculty_id, faculty_name) VALUES
-(101, 'Sociology'),
-(102, 'Psychology');
+INSERT INTO 
+faculties (faculty_name)
+VALUES
+    ('Sociology'),
+    ('Psychology'),
+    ('Chemistry'),
+    ('Physics'),
+    ('Botany'),
+    ('Zoology'),
+    ('Anthropology'),
+    ('Criminology'),
+    ('Journalism'),
+    ('Political Science');
 
 SELECT * FROM laborers;
 SELECT * FROM faculties;
 
--- cross join
-
-SELECT * FROM laborers
-CROSS JOIN faculties;
-
-SELECT * FROM laborers
-NATURAL JOIN faculties;
